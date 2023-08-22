@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,400;1,500;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+.container {
+  width: 1000px;
+  max-width: 100%;
+  min-width: calc(250px - 25px);
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 15px 30px;
+  overflow: hidden;
+}
+
+.container .wrapper-nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.container .wrapper-nav .translate {
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+.container .wrapper-nav .translate select {
+  appearance: none; /* Menghilangkan tampilan default browser */
+  -webkit-appearance: none; /* Untuk dukungan browser WebKit */
+  -moz-appearance: none; /* Untuk dukungan browser Mozilla Firefox */
+  background: url("images/globe-regular-24.png") no-repeat right center; /* Menggunakan ikon sebagai background */
+  padding-right: 20px; /* Memberi ruang untuk ikon */
+  width: 100px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 5px;
+  border: 1px solid rgba(225, 225, 225, 0.9);
+  box-shadow: 0, 0, 20px black;
+}
+.container .wrapper-nav .translate select option {
+  font-size: 1rem;
+  box-shadow: 0, 0, 20px black;
+  border: none;
+  outline: none;
+}
+.container .wrapper-nav .registrasi {
+  position: relative;
+  height: 55px;
+  max-width: 150px;
+  flex: 1;
+}
+.container .wrapper-nav .registrasi header {
+  position: absolute;
+  top: 0;
+  font-size: 1.6em;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.container .registrasi li {
+  position: absolute;
+  list-style: none;
+  width: 50%;
+  height: 5px;
+  bottom: 30%;
+  left: 0;
+  border-radius: 6px;
+  background: red;
+  transition: 5s ease;
+}
+
+.container form {
+  position: relative;
+  min-height: 490px;
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+.container form .form {
+  position: absolute;
+  transition: 0.3s ease;
+}
+
+.container form .form.first {
+  position: absolute;
+  background-color: white;
+}
+.container form .form.second {
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(100%);
+}
+
+.container form.active .form.second {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(0);
+}
+.container form.active .form.first {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-100%);
+}
+.container.active .registrasi li {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: 30%;
+  left: 0;
+  border-radius: 6px;
+  background: #4070f4;
+  display: block;
+}
+.container form .title {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.container form .fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container form .fields .input-field {
+  display: flex;
+  width: calc(100% / 3 - 15px);
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.container form .identity,
+.container form .family {
+  margin: 20px 0;
+}
+.fields .input-field label {
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.fields .input-field input {
+  height: 46px;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #333;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  border: 1px solid #aaa;
+}
+
+.fields .input-field input[type="date"] {
+  color: #707070;
+}
+.fields .input-field input[type="date"]:valid {
+  color: #333;
+}
+.fields .input-field select {
+  height: 46px;
+  padding: 14px;
+  font-size: 0.9em;
+  color: #707070;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  border: 1px solid #aaa;
+}
+.fields .input-field select:valid {
+  color: #333;
+}
+.fields .input-field input:is(:focus) {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.fields .input-field input:is(:valid) {
+  background-color: rgba(0, 89, 255, 0.2);
+  border: 1px solid rgba(0, 89, 255, 0.4);
+}
+.fields .input-field select:is(:focus) {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.fields .input-field select:is(:valid) {
+  background-color: rgba(0, 89, 255, 0.2);
+  border: 1px solid rgba(0, 89, 255, 0.4);
+}
+
+.container .container-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+button.next-btn,
+button.back-btn,
+button.send-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  background-color: #4070f4;
+  border: none;
+  outline: none;
+  padding: 2px auto;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 10px 0;
+  color: white;
+}
+button.next-btn:hover,
+button.back-btn:hover,
+button.send-btn:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 225, 0.6);
+}
+button.next-btn .btn-text,
+button.send-btn .btn-text {
+  padding-right: 10px;
+}
+button.back-btn .btn-text {
+  padding-left: 10px;
+}
+button.next-btn i,
+button.send-btn i {
+  font-size: 1.4rem;
+  line-height: 40px;
+}
+button.back-btn i {
+  font-size: 1.4rem;
+  line-height: 40px;
+  transform: rotate(180deg);
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 750px) {
+  .container form .fields .input-field {
+    width: calc(100% / 2 - 15px);
+  }
+  button.send-btn,
+  button.back-btn {
+    width: calc(100% / 2 - 30px);
+  }
+  .container form {
+    min-height: 650px;
+  }
+}
+@media (max-width: 360px) {
+  .container form .fields .input-field {
+    width: calc(100% - 15px);
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  button.next-btn {
+    width: 90%;
+    margin-left: -15px;
+  }
+  button.send-btn,
+  button.back-btn {
+    width: calc(100% - 15px);
+  }
+  .container form {
+    min-height: 1150px;
+  }
+  .container .wrapper-nav .translate select {
+    max-width: 28px;
+    color: transparent;
+  }
+  .container .wrapper-nav .translate select option {
+    font-size: 1rem;
+    font-weight: 400;
+    color: black;
+  }
+  .container form {
+    min-height: 1150px;
+  }
+}

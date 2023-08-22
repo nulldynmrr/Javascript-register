@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="title">Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper-nav">
+        <div class="registrasi">
+          <header  data-translate="header">Registration</header>
+          <li></li>
+          <li class="active"></li>
+        </div>
+        <div class="translate">
+          <select name="" id="translate">
+            <option value="Bahasa" hidden  data-translate="pilihBahasa">Bahasa</option>
+            <option value="id" id="ina" data-translate="INA">Indonesia</option>
+            <option value="en" id="eng" data-translate="ENG">Inggris</option>
+            <option value="ko" id="kra" data-translate="KRA">Korea</option>
+          </select>
+        </div>
+      </div>
+
+      <form action="#" autocomplete="off">
+        <div class="form first">
+          <div class="details personal">
+            <span class="title" data-translate="titleFormPersonal">Personal Details</span>
+            <div class="fields">
+              <div class="input-field">
+                <label for="name" data-translate="labelName">Full Name</label>
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Your Name"
+                  minlength="5"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="date" data-translate="labelBirth">Date of Birth</label>
+                <input
+                  name="date"
+                  type="date"
+                  placeholder="Your Birthday"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="email" data-translate="labelEmail">Email</label>
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Your Email"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="number" data-translate="labelMobile">Mobile Number</label>
+                <input
+                  name="number"
+                  type="text"
+                  placeholder="Mobile Number"
+                  required
+                  pattern="(62|+62|0)8[1-9][0-9]{6,9}$" />
+              </div>
+              <div class="input-field">
+                <label for="gender" data-translate="labelGender">Gender</label>
+                <select name="gender" required>
+                  <option value="" hidden data-translate="labelOptionGender">Your Gender</option>
+                  <option value="Male" data-translate="labelGenderMale">Male</option>
+                  <option value="Male" data-translate="labelGenderFemale">Female</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label for="occupation" data-translate="labelOccupation">Occupation</label>
+                <input
+                  name="occupation"
+                  type="text"
+                  placeholder="Your Occupation"
+                  required />
+              </div>
+            </div>
+          </div>
+          <div class="identity personal">
+            <span class="title" data-translate="titleIdentity">Identity Details</span>
+            <div class="fields">
+              <div class="input-field">
+                <label for="idType" data-translate="labelIDType">ID Type</label>
+                <input
+                  name="idType"
+                  type="text"
+                  placeholder="Your ID Type"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="idNumber" data-translate="labelIDNumber">ID Number</label>
+                <input
+                  name="idNumber"
+                  type="text"
+                  placeholder="Your ID Number"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="authority" data-translate="labelAuthority">Issue Authority</label>
+                <input
+                  name="authority"
+                  type="text"
+                  placeholder="Your Issue Department"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="name" data-translate="labelSate">Issued State</label>
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Issued State"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="name" data-translate="labelDate">Issued Date</label>
+                <input
+                  name="name"
+                  type="date"
+                  placeholder="Issued Date"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="name" data-translate="labelExpiry">Expiry Date</label>
+                <input
+                  name="name"
+                  type="date"
+                  placeholder="Expiry Date"
+                  required />
+              </div>
+            </div>
+          </div>
+          <div class="container-btn">
+            <button class="next-btn">
+              <span class="btn-text" data-translate="labelButtonNext">Next</span>
+              <span>
+                <i class="bx bxs-send"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="form second">
+          <div class="details address">
+            <span class="title">Personal Details</span>
+            <div class="fields">
+              <div class="input-field">
+                <label for="name">Addres type</label>
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Permanent or Tempory"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="date">Nationaly</label>
+                <input
+                  name="date"
+                  type="text"
+                  placeholder="Your Nationality"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="email">State</label>
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Your State"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="district">District</label>
+                <input
+                  name="district"
+                  type="text"
+                  placeholder="Your District"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="blockNumber">Block Number</label>
+                <input
+                  name="blockNumber"
+                  type="number"
+                  placeholder="Block Number"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="wardNumber">Ward Number</label>
+                <input
+                  name="wardNumber"
+                  type="text"
+                  placeholder="Ward Number"
+                  required />
+              </div>
+            </div>
+          </div>
+          <div class="family details">
+            <span class="title">Family Details</span>
+            <div class="fields">
+              <div class="input-field">
+                <label for="fatherName">Father Name</label>
+                <input
+                  name="fatherName"
+                  type="text"
+                  placeholder="Father Name"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="motherName">Mother Name</label>
+                <input
+                  name="motherName"
+                  type="text"
+                  placeholder="Mother Name"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="grandfather">Grandfather</label>
+                <input
+                  name="grandfather"
+                  type="text"
+                  placeholder="Grandfather Name"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="name">Spouse Name</label>
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Spouse Name"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="name">Father in Law</label>
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Father in Law Name"
+                  required />
+              </div>
+              <div class="input-field">
+                <label for="name">Mother in Law</label>
+                <input name="name" type="text" placeholder="Mother in Law Name"
+                / required>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="back-btn">
+              <span>
+                <i class="bx bxs-send"></i>
+              </span>
+              <span class="btn-text">Back</span>
+            </button>
+            <button class="send-btn">
+              <span class="btn-text">Kirim</span>
+              <span>
+                <i class="bx bxs-send"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
